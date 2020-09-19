@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    compileSdkVersion builds.compile_sdk
+
+    defaultConfig {
+        applicationId "wee.digital.example"
+        minSdkVersion builds.min_sdk
+        targetSdkVersion builds.target_sdk
+        versionCode builds.version_code
+        versionName builds.version_name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar, *.aar"])
+    implementation deps.kotlin.stdlib
+    implementation deps.android.appcompat
+    implementation deps.android.fragment
+    implementation deps.android.recyclerview
+    implementation deps.android.corektx
+    implementation deps.android.constraintlayout
+    implementation deps.android.browser
+
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.rxjava
+
+    implementation deps.reactivex.android
+
+    implementation deps.glide.glide
+    kapt deps.glide.compiler
+}

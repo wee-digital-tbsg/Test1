@@ -38,6 +38,8 @@ dependencies {
     implementation deps.android.corektx
     implementation deps.android.constraintlayout
     implementation deps.android.browser
+    implementation deps.android.coroutines_core
+    implementation deps.android.coroutines
 
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.gson

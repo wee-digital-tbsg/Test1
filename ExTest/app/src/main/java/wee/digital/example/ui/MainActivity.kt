@@ -2,6 +2,7 @@ package wee.digital.example.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.JsonArray
 import wee.digital.example.R
 
 class MainActivity : AppCompatActivity() {

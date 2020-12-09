@@ -52,6 +52,8 @@ android.legacy_v4 = 'androidx.legacy:legacy-support-v4:1.0.0'
 android.media = "androidx.media:media:1.1.0"
 android.multidex = "androidx.multidex:multidex:2.0.1"
 android.material =  "com.google.android.material:material:1.1.0-alpha07"
+android.coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
+android.coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
 deps.android = android
 
 def navigation = [:]
